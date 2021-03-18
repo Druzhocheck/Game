@@ -11,20 +11,20 @@ Emerald = pygame.image.load('D:\VSCode\Project\Game\Sprites\Emerald.png')
 pygame.display.set_icon(Emerald)
 
 dog_img = [pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-1.png'),
-              pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-2.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-3.png'),
-              pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-4.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-5.png'),
-              pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-6.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Dogs\Dogers\Doger-7.png')]
+              pygame.image.load('Sprites\Dogs\Dogers\Doger-2.png'), pygame.image.load('Sprites\Dogs\Dogers\Doger-3.png'),
+              pygame.image.load('Sprites\Dogs\Dogers\Doger-4.png'), pygame.image.load('Sprites\Dogs\Dogers\Doger-5.png'),
+              pygame.image.load('Sprites\Dogs\Dogers\Doger-6.png'), pygame.image.load('Sprites\Dogs\Dogers\Doger-7.png')]
 
-cat_img = [pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-1.png'),
-           pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-2.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-3.png'),
-           pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-4.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-5.png'),
-           pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-6.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-7.png'),
-           pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-8.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-9.png'),
-           pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-10.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Cats\Catters\Cat-12.png')] 
-bird_img = [pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-1.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-2.png'),
-            pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-3.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-4.png'),
-            pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-5.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-6.png'),
-            pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-7.png'), pygame.image.load('D:\VSCode\Project\Game\Sprites\Birds\Birders\Bird-8.png'),]
+cat_img = [pygame.image.load('Sprites\Cats\Catters\Cat-1.png'),
+           pygame.image.load('Sprites\Cats\Catters\Cat-2.png'), pygame.image.load('Sprites\Cats\Catters\Cat-3.png'),
+           pygame.image.load('Sprites\Cats\Catters\Cat-4.png'), pygame.image.load('Sprites\Cats\Catters\Cat-5.png'),
+           pygame.image.load('Sprites\Cats\Catters\Cat-6.png'), pygame.image.load('Sprites\Cats\Catters\Cat-7.png'),
+           pygame.image.load('Sprites\Cats\Catters\Cat-8.png'), pygame.image.load('Sprites\Cats\Catters\Cat-9.png'),
+           pygame.image.load('Sprites\Cats\Catters\Cat-10.png'), pygame.image.load('Sprites\Cats\Catters\Cat-12.png')] 
+bird_img = [pygame.image.load('Sprites\Birds\Birders\Bird-1.png'), pygame.image.load('Sprites\Birds\Birders\Bird-2.png'),
+            pygame.image.load('Sprites\Birds\Birders\Bird-3.png'), pygame.image.load('Sprites\Birds\Birders\Bird-4.png'),
+            pygame.image.load('Sprites\Birds\Birders\Bird-5.png'), pygame.image.load('Sprites\Birds\Birders\Bird-6.png'),
+            pygame.image.load('Sprites\Birds\Birders\Bird-7.png'), pygame.image.load('Sprites\Birds\Birders\Bird-8.png'),]
 
 cats = 0
 dogs = 0
@@ -106,7 +106,7 @@ def Start():
     game = True
     animals_array = []
     Create_Animal(animals_array)
-    land = pygame.image.load('D:\VSCode\Project\Game\Sprites\BackGround.png')
+    land = pygame.image.load('Sprites\BackGround.png')
     while game:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -243,7 +243,7 @@ def Crash(barriers):
                #     return True
     return False
 
-def Print_text(message, x, y, font_color = (255, 0 ,0), font_type = 'D:\VSCode\Project\Game\Sprites\holiday-home1.ttf', font_size = 40):
+def Print_text(message, x, y, font_color = (255, 0 ,0), font_type = 'Sprites\holiday-home1.ttf', font_size = 40):
     font_type = pygame.font.Font(font_type, font_size)
     text = font_type.render(message, True, font_color)
     display.blit(text, (x,y))
